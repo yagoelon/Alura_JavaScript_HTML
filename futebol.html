@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06 Alura</title>
+</head>
+
+<body>
+
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var vitorias = parseInt(prompt("Digita o número de vitórias do seu time: "));
+        var empates = parseInt(prompt("Digita o número de empates do seu time: "));
+        var pontoVitoria = 3;
+        var pontoEmpate = 1;
+        var pontos = (vitorias*pontoVitoria) + (empates*pontoEmpate);
+
+        mostra("Seu time tem: " + pontos + " pontos.");
+
+        if (pontos>30){
+            mostra ("Seu time está melhor que ano passado!")
+        }
+        if (pontos<30){
+            mostra ("Seu time está pior que ano passado!")
+        }
+        if (pontos==30){
+            mostra ("Seu time está igual que ano passado!")
+        }
+
+    </script>
+
+</body>

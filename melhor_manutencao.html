@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhorando a manutenção do código</title>
+</head>
+
+<body>
+    <script>
+        function pulaLinha() { //função sempre um verbo pois indica uma ação que será executada.
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function exibir(frase){ //efetuado uma função onde ela recebe um parametro então o javascript lê frase="Elon tem " + (ano - 1975) + " anos"
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var ano = 2017; // necessário colocar o nome exato da váriavel não pode ser "Ano" ou "aNo" tem que ser "ano"
+        
+        exibir("Elon tem " + (ano - 1975) + " anos");
+        exibir("Lopes tem " + (ano - 1990) + " anos");
+
+        ano = 2023 // como é apenas retribuição da variável não é necessário o var
+        exibir("Yago tem " + (ano - 2000) + " anos");
+    </script>
+</body>
+
+</html>

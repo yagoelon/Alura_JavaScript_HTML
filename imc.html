@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo do IMC</title>
+</head>
+
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function calculaImc(altura, peso) {
+            var imc = peso / (altura * altura);
+            return imc
+        }
+        //PODE-SE FAZER TAMBÉM ASSIM:
+        // function calculaImc(altura, peso) {
+        //     return imc = peso / (altura * altura);
+        // }
+
+        var imcAtual = calculaImc(1.75, 82);
+        var imcAntigo = calculaImc(1.75, 75);
+        var imcTotal = imcAtual + imcAntigo
+
+        //mostra("O IMC atual do Yago é " + imcAtual);
+        //mostra("O IMC antigo do Yago é " + imcAntigo);
+        //mostra("A soma dos IMC's é " + imcTotal);
+
+        var nome = prompt("Qual é o seu nome?");
+        var alturaInformada = prompt("Informe a sua altura: ");
+        var pesoInformado = prompt("Informe o seu peso: ");
+
+        var imc = calculaImc(alturaInformada, pesoInformado);
+
+        mostra(nome + "o seu IMC é: " + imc);
+
+        if (imc < 18.5) {
+            mostra("O seu IMC está abaixo do recomendado.");
+        }
+        if (imc > 24.9) {
+            mostra("O seu IMC está acima do recomendado.");
+        }
+        if (imc >= 18.5 && imc <= 24.9) {
+            mostra("O seu IMC está dentro do recomendado.");
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada 7</title>
+</head>
+
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        };
+
+        function mostra(frase) {
+
+            document.write(frase);
+            pulaLinha();
+        };
+
+        //UTILIZANDO WHILE:
+        //var mutiplicador = 1;
+    
+        //while (multiplicador <= 10) {
+        //    mostra(7 * multiplicador);
+        //    multiplicador = multiplicador + 1
+        //}
+
+        //UTILIZANDO FOR
+        for (var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+
+            mostra(7 * multiplicador);
+
+        }
+
+        mostra("FIM");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+</head>
+
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        };
+
+        function mostra(frase) {
+
+            document.write(frase);
+            pulaLinha();
+        };
+
+        function sorteia(n) {
+            return Math.round(Math.random() * n);
+        };
+
+        var numeroPensado = sorteia(10);
+        console.log(numeroPensado);
+        var tentativas = 1;
+
+        while (tentativas <= 3) {
+            var numeroDigitado = parseInt(prompt("Adivinhe o número que pensei de 0 a 10. Qual número você acha que é?"));
+
+            if (numeroDigitado == numeroPensado) {
+                mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+                break;
+            } else {
+                if (numeroDigitado > numeroPensado) {
+                    mostra("Você errou! Eu tinha pensado em um número menor, era o " + numeroPensado);
+                }
+                else {
+                    mostra("Você errou! Eu tinha pensado em um número maior, era o  " + numeroPensado);
+                }
+            }
+
+            tentativas++
+        }
+    </script>
+</body>
+
+</html>
